@@ -1,4 +1,3 @@
-import React from 'react';
 import './accomodation.scss'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";

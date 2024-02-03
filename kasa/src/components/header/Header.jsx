@@ -1,4 +1,3 @@
-import React from 'react';
 import './header.scss'
 import Logo from '../../assets/logo.png'
 import Navbar from '../navbar/Navbar'

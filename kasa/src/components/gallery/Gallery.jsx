@@ -1,4 +1,3 @@
-import React from 'react';
 import './gallery.scss'
 import datas from '../../data/data'
 import Card from '../card/Card'

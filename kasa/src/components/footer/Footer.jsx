@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './footer.scss'
 import logo from '../../assets/logo_footer.png'
 
