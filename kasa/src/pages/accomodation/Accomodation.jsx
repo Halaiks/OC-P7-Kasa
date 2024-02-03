@@ -1,3 +1,4 @@
+// Imports
 import './accomodation.scss'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
@@ -10,28 +11,36 @@ import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.png';
 import NotFound from '../notFound/NotFound';
 
+// Déclaration de la fonction de composant
 export default function Accomodation() {
 
+	// State pour gérer les images du slider
 	const [imageSlider, setImageSlider] = useState([]);
 
+	// Extraction de l'identifiant de l'hébergement à partir des paramètres de l'URL
 	const { id } = useParams();
+	// Filtrage des données pour obtenir les informations de l'hébergement actuel
 	const dataCurrentAccomodation = datas.filter(data => data.id === id);
 
+	// Utilisation de useEffect pour mettre à jour les images du slider lorsque l'ID de l'hébergement change
 	useEffect(() => {
 		if (dataCurrentAccomodation.length > 0) {
 			setImageSlider(dataCurrentAccomodation[0].pictures);
 		}
 	}, [id, dataCurrentAccomodation]);
 
+	// Si aucune correspondance d'hébergement n'est trouvée, affiche une page NotFound
 	if (dataCurrentAccomodation.length === 0) {
 		return <NotFound />;
 	}
 
+	// Extraction des informations de l'hébergement actuel
 	const name = dataCurrentAccomodation[0].host.name.split(' ');
 	const rating = dataCurrentAccomodation[0].rating;
 	const description = dataCurrentAccomodation[0].description;
 	const equipments = dataCurrentAccomodation[0].equipments;
 
+	// Affichage du composant de la page d'hébergement
 	return (
 		<>
 			<Header />

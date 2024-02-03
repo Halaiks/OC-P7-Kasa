@@ -1,9 +1,12 @@
+// Imports
 import './notFound.scss'
 import Header from "../../components/header/Header";
 import { Link } from 'react-router-dom';
 
+// Déclaration de la fonction de composant page 404
 export default function NotFound() {
 	return (
+		// Conteneur principal de la page 404 avec la classe 'notFound' et les composants
 		<div className='notFound'>
 			<Header />
 			<div className="notFound_infos">

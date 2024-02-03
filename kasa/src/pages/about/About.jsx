@@ -1,11 +1,14 @@
+// Imports
 import './about.scss';
 import Header from "../../components/header/Header";
 import Banner from '../../components/banner/Banner';
 import Collapse from '../../components/collapse/Collapse';
 import Footer from '../../components/footer/Footer';
 
+// Déclaration de la fonction de composant "About"
 export default function About() {
 
+	// Données statiques
 	const aboutDatas = [
 		{
 			"id": "1",
@@ -15,12 +18,12 @@ export default function About() {
 		{
 			"id": "2",
 			"title": "Respect",
-			"content": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.."
+			"content": "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."
 		},
 		{
 			"id": "3",
 			"title": "Service",
-			"content": "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.."
+			"content": "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."
 		},
 		{
 			"id": "4",
@@ -29,10 +32,11 @@ export default function About() {
 		}
 	]
 
+	// Retourne la structure JSX du composant About
 	return (
 		<div>
 			<Header />
-			<Banner />
+			<Banner /> 
 			<main className='about_main'>
 				{aboutDatas.map(data => {
 					return (
