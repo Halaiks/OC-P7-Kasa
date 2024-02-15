@@ -32,7 +32,6 @@ export default function About() {
 		}
 	]
 
-	// Retourne la structure JSX du composant About
 	return (
 		<div>
 			<Header />

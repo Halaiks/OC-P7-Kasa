@@ -29,7 +29,7 @@ export default function Accomodation() {
 		}
 	}, [id, dataCurrentAccomodation]);
 
-	// Si aucune correspondance d'hébergement n'est trouvée, affiche une page NotFound
+	// Si aucune correspondance n'est trouvée, affiche une page NotFound
 	if (dataCurrentAccomodation.length === 0) {
 		return <NotFound />;
 	}
